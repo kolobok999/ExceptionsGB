@@ -1,19 +1,26 @@
-package Lessons;
+package Lessons.Lesson1;
+
 //Реализуйте метод, принимающий в качестве аргумента целочисленный массив.
 //Если длина массива меньше некоторого заданного минимума, метод возвращает -1, в качестве кода ошибки, иначе - длину массива.
-public class Lesson1 {
-    public static void main(String[] args) {
-        Lesson1 lesson1 = new Lesson1();
-        lesson1.go();
+public class Task1 {
+    public static void main(String[] args) throws Exception {
+        Task1 task1 = new Task1();
+        task1.go();
     }
 
-    public void go() {
-        int[] arr = {12, 15, 5, 8, 45};
-        int find
-        System.out.println(length(arr, 5));
+    public void go() throws Exception{
+
     }
-    public int length(int[] array, int a) {
-        if (array.length < a) return -1;
-        else return array.length;
+    public int[] subArrays(int[] a, int[] b){
+        // Введите свое решение ниже
+        if (a.length != b.length) {
+            return new int[]{0};
+        }
+        int size = a.length;
+        int[] c = new int[size];
+        for (int i = 0; i < size; i++) {
+            c[i] = Math.abs(a[i] - b[i]);
+        }
+        return c;
     }
 }
